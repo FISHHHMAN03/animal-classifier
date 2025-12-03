@@ -16,6 +16,7 @@ def compile(module_name):
         f'/OUT:{module_name}.pyd'
     )
 
+
     if subprocess.call(cmd, shell=True) != 0:
         raise RuntimeError("Compilation failed")
 

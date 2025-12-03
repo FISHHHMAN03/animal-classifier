@@ -17,31 +17,36 @@ struct Node {
     }
 };
 
-string classify(Node* node, bool x, bool y){
+string classify(Node* node, bool x, bool y,bool z){
     if(!node) return ":(";
     if(!node->feature.empty()){
        if (node->feature == "x") {
-            return classify(x ? node->right : node->left, x, y);
+            return classify(x ? node->right : node->left, x,y,z);
        }
-       if (node->feature == "y"){
-            return classify(y ? node->right : node->left, x, y);
+       if (node->feature == "y") {
+            return classify(y ? node->right : node->left, x,y,z);
        }
+       if (node->feature == "z") {
+            return classify(z ? node->right : node->left, x,y,z);
+       }
+
     }
     return node->label;
 }
 
 Node* build_tree(){
     Node* root = new Node("x");
-    root->left = new Node("","No");
+    root->left = new Node("z");
     root->right = new Node("y");
-    root->right->left = new Node("","No");
-    root->right->right = new Node("","Yes");
+    root->left->left = new Node("","Dog");
+    root->right->right = new Node("","Bird");
+
     return root;
 }
 
-string predict(bool x, bool y) {
+string predict(bool x, bool y,bool z) {
     Node* root = build_tree();
-    string result = classify(root,x,y);
+    string result = classify(root,x,y,z);
     return result;
 }
 
