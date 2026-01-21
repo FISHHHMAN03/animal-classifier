@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="80aaad20-6693-430b-9d6f-270be7bdb81b" name="SynologyWiktor">
+        <fileTransfer rootFolder="/volume1/homes/Admin.Wiktor/demo_django_app" accessType="SFTP" host="192.168.1.191" port="22" sshConfigId="40c26e47-2794-469f-8e6c-56145292f1ec" sshConfig="SynologyWiktor">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,18 +1,20 @@
 from django.db import models
-from binary_tree import *
+from binary_forest_animal_classifier import *
+
 # Create your models here.
-class Binary_Tree_Model_v1(models.Model):
-    x = models.BooleanField(default=False)
-    y = models.BooleanField(default=False)
-    result = models.CharField(max_length=5)
+class Binary_Tree_Model_v2(models.Model):
+    input = models.TextField(blank=True)
+    output = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
-    created_at = models.DateTimeField(auto_now_add=True,blank=True,null=True)
-
-    def give_result(self):
-        return predict(self.x,self.y)
-
+    def give_output(self):
+        traits = self.input.split(',')
+        return classify(traits)
 
     def save(self,*args,**kwargs):
-        self.result = self.give_result()
-        super().save(*args, **kwargs)
+        self.output = self.give_output()
+        super().save(*args,**kwargs)
+
+
+
 

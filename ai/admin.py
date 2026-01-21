@@ -1,13 +1,13 @@
 from django.contrib import admin
-from .models import  Binary_Tree_Model_v1
+from .models import  Binary_Tree_Model_v2
 
 # Register your models here.
-@admin.register(Binary_Tree_Model_v1)
-class Binary_Tree_Model_v1_admin(admin.ModelAdmin):
-    list_display = ("id", "x", "y", "result", "created_at")
-    search_fields = ("result",)
-    list_filter = ("result", "created_at")
+@admin.register(Binary_Tree_Model_v2)
+class Binary_Tree_Model_v2_admin(admin.ModelAdmin):
+    list_display = ("id", "input", "output", "created_at")
+    search_fields = ("output",)
+    list_filter = ("output", "created_at")
     ordering = ("-created_at",)
 
-    fields = ("x", "y", "result")
-    readonly_fields = ("result",)
+    fields = ("input", "output")
+    readonly_fields = ("output",)

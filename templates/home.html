@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="container py-4">
+
+        <!-- Hero -->
+        <div class="p-5 mb-4 bg-light border rounded-3">
+            <div class="container-fluid py-3">
+                <h1 class="display-6 fw-bold mb-2">Hello Bootstrap + Django</h1>
+                <p class="col-lg-8 fs-5 text-muted mb-4">
+                    This page uses Bootstrap layout, cards, and a Django form.
+                </p>
+                <a class="btn btn-primary btn-lg" href="#contact">Do something</a>
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-12 col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 1</h5>
+                        <p class="card-text text-muted mb-0">Cards come from Bootstrap.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 2</h5>
+                        <ul class="mb-0">
+                            <li>has_spine</li>
+                            <li>has_feathers</li>
+                            <li>can_fly</li>
+                            <li>can_swim</li>
+                            <li>viviparity</li>
+                            <li>four_legs</li>
+                            <li>is_predator</li>
+                            <li>two_legs</li>
+                            <li>lay_eggs</li>
+                            <li>shell</li>
+                            <li>four_legs</li>
+                            <li>has_fins</li>
+                            <li>is_predator</li>
+                            <li>moist_skin</li>
+                            <li>can_jump</li>
+                            <li>two_parts</li>
+                            <li>eight_legs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Form -->
+            <div class="col-12 col-md-4" id="contact">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <h5 class="card-title mb-0">Card 3</h5>
+                            <span class="badge text-bg-secondary">Form</span>
+                        </div>
+
+                        <p class="text-muted small mb-3">
+                            Submit the form and display the result below.
+                        </p>
+
+                        <form method="post" class="vstack gap-3">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button class="btn btn-primary w-100" type="submit">Send</button>
+
+                            {# Output display #}
+                            {% if output %}
+                                <div class="alert alert-success mb-0" role="alert">
+                                    <strong>Answer:</strong> {{ output }}
+                                </div>
+                            {% else %}
+                                <div class="alert alert-secondary mb-0" role="alert">
+                                    No answer yet.
+                                </div>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

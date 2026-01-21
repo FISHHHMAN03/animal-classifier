@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,10 @@ SECRET_KEY = 'django-insecure-g3bux#s)7&vk4shd97dl(okzt5nr$bkuwfl+srkq^n+3z7_adj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["192.168.1.191",
+    "localhost",
+    "127.0.0.1",
+]
 
 # Static & Media Settings
 STATIC_URL = '/static/'
@@ -33,14 +37,13 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
-
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,6 +52,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ai'
 ]
+
+
+#jazzmin settings
+JAZZMIN_SETTINGS = {
+    "site_title": "Admin",
+    "site_header": "Admin Panel",
+    "site_brand": "My App",
+    "welcome_sign": "Welcome to the admin",
+    "show_sidebar": True,
+    "navigation_expanded": True,
+
+    "custom_css": "css/admin_black.css",
+
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -122,11 +139,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
-
-STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

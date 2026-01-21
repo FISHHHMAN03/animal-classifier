@@ -1,0 +1,11 @@
+
+                (has_feathers?)
+                 /           \
+            yes /             \ no 3
+            (can_fly?)       Not Bird
+           /         \
+           yes          no 2
+      Eagle       (can_swim?)
+                   /       \
+                  yes          no 1
+             Penguin     Ostrich

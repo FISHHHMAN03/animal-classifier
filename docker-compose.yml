@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    container_name: animal-classifier
+    ports:
+      - "8000:8000"
+    environment:
+      DJANGO_SECRET_KEY: "put-a-long-random-secret-here"
+      DJANGO_DEBUG: "0"
+      DJANGO_ALLOWED_HOSTS: "79.187.134.195,192.168.1.191,localhost,127.0.0.1"
+    volumes:
+      - ./db.sqlite3:/app/db.sqlite3
+      - ./media:/app/media
+    restart: unless-stopped

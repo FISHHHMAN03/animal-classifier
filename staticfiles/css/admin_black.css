@@ -1,0 +1,181 @@
+/* =========================
+   Jazzmin Dark: Black/Grey/White + Blue accents
+   ========================= */
+
+/* Base backgrounds */
+body,
+.content-wrapper,
+.content,
+.wrapper {
+  background: #0a0b0d !important;   /* near-black */
+  color: #e6e8ee !important;        /* soft white */
+}
+
+/* Navbar + sidebar */
+.navbar,
+.main-header,
+.main-sidebar,
+.control-sidebar,
+.brand-link {
+  background: #0b0f16 !important;   /* slightly blue-black */
+  border-color: #1a2233 !important;
+}
+
+/* Sidebar menu items */
+.nav-sidebar .nav-item > .nav-link {
+  color: #cfd6e4 !important;        /* light grey */
+  border-radius: 10px;
+  margin: 2px 8px;
+}
+
+.nav-sidebar .nav-item > .nav-link:hover {
+  background: #111a2a !important;   /* dark blue hover */
+  color: #ffffff !important;
+}
+
+/* Active item (blue accent) */
+.nav-sidebar .nav-item > .nav-link.active,
+.nav-sidebar .nav-item.menu-open > .nav-link {
+  background: #0b2a5a !important;   /* deep blue */
+  color: #ffffff !important;
+  box-shadow: 0 0 0 1px #144a9a inset;
+}
+
+/* Brand text */
+.brand-link .brand-text {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* Links */
+a {
+  color: white !important;        /* bright blue */
+}
+a:hover {
+  color: whitesmoke !important;
+}
+
+/* Cards / content blocks */
+.card,
+.info-box,
+.small-box,
+.box,
+.content-header {
+  background: #0f141f !important;   /* dark slate */
+  color: #e6e8ee !important;
+  border: 1px solid #1a2233 !important;
+  border-radius: 14px;
+}
+
+/* Tables */
+.table,
+.table thead th {
+  color: #e6e8ee !important;
+}
+.table thead th {
+  background: #101826 !important;
+  border-color: #1a2233 !important;
+}
+.table td,
+.table th {
+  border-color: #1a2233 !important;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background: #0c111a !important;
+}
+.table-hover tbody tr:hover {
+  background: #121c2c !important;
+}
+
+/* Form controls */
+.form-control,
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+  background: #0c111a !important;
+  color: #e6e8ee !important;
+  border: 1px solid #1a2233 !important;
+  border-radius: 10px;
+}
+
+.form-control:focus,
+.select2-container--default.select2-container--focus .select2-selection--multiple,
+.select2-container--default .select2-selection--single:focus {
+  border-color: #2b7cff !important;
+  box-shadow: 0 0 0 0.15rem rgba(43, 124, 255, 0.25) !important;
+}
+
+/* Buttons (dark blue primary) */
+.btn-primary,
+.btn-success,
+input[type="submit"].default {
+  background: #0b2a5a !important;   /* dark blue */
+  border-color: #144a9a !important;
+  color: #ffffff !important;
+  border-radius: 12px;
+}
+
+.btn-primary:hover,
+.btn-success:hover,
+input[type="submit"].default:hover {
+  background: #0e3573 !important;
+  border-color: #1b5cc0 !important;
+}
+
+.btn-secondary {
+  background: #1a2233 !important;
+  border-color: #24304a !important;
+  color: #e6e8ee !important;
+  border-radius: 12px;
+}
+
+.btn-danger {
+  background: #5a1a1a !important;
+  border-color: #7a2424 !important;
+  color: #ffffff !important;
+  border-radius: 12px;
+}
+
+/* Badges / labels */
+.badge,
+.label {
+  border-radius: 10px !important;
+}
+
+/* Django messages / alerts */
+.alert {
+  border-radius: 14px !important;
+}
+.alert-info {
+  background: rgba(77, 163, 255, 0.12) !important;
+  border-color: rgba(77, 163, 255, 0.25) !important;
+  color: #d7e9ff !important;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  background: #0f141f !important;
+  border: 1px solid #1a2233 !important;
+  border-radius: 14px !important;
+}
+
+/* Dropdown menus */
+.dropdown-menu {
+  background: #0f141f !important;
+  border: 1px solid #1a2233 !important;
+  border-radius: 14px !important;
+}
+.dropdown-item {
+  color: #cfd6e4 !important;
+}
+.dropdown-item:hover {
+  background: #111a2a !important;
+  color: #ffffff !important;
+}
+
+/* Optional: soften icons */
+.nav-icon,
+.fas,
+.far,
+.fab {
+  color: inherit !important;
+}
