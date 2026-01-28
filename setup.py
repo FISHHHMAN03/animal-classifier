@@ -4,7 +4,7 @@ import pybind11
 ext_modules = [
     Extension(
         "binary_forest_animal_classifier",
-        ["binary_forest_animal_classifier.cpp"],
+        ["binary_forest_swimmer_classifier.cpp"],
         include_dirs=[pybind11.get_include()],
         language="c++",
         extra_compile_args=["-O3", "-std=c++17"],

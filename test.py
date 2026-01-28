@@ -1,6 +1,9 @@
-from binary_forest_animal_classifier import *
+from binary_forest_swimmer_classifier import Features,classify
 
 
-traits = ['has_spine','has_feathers','can_fly']
+f = Features()
+f.height = 183.0
+f.weight = 90.0
+f.arm_length = 195.0
 
-print(classify(traits))
+print(classify(f))
